@@ -1,2 +1,2 @@
 # Calculo-de-horas
-Calcular horas diurnas e noturnas
+Cálculo de horas noturnas e diurnas
