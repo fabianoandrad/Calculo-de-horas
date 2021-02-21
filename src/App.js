@@ -16,10 +16,10 @@ function App() {
   async function handleAddHours() {
     // Envia os dados para o back-end
     const response = await api.post("projects", {
-      hourIn: '18',
-      minIn: '30',
-      hourOut: '24',
-      minOut: '40',
+      hourIn:  '14',
+      minIn:   '13',
+      hourOut: '21',
+      minOut:  '44',
     });
 
     const project = response.data;
@@ -34,15 +34,15 @@ function App() {
   return (
     <>
       <Header title="Cálcular Horas" />
+
+      <button type="button" onClick={handleAddHours}>Cálcular horas</button>
       <ul>
         {calculateHours.map((hours) => (
-          <li key={hours.id}>{hours.valueSumHour}:{hours.valueSumMin}</li>
+
+          <li key={hours.id}>{hours.valueHourDiurno}:{hours.valueMinDiurno} {hours.DiurnoResult} e {hours.valueHourNoturno}:{hours.valueMinNoturno} {hours.NoturnoResult}</li>
+          
         ))}
       </ul>
-
-      <button type="button" onClick={handleAddHours}>
-        Cálcular
-      </button>
     </>
   );
 }
