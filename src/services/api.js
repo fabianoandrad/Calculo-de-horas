@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://calculo-de-horas-back-end.vercel.app",
+  baseURL: "http://calculatorbd-com.umbler.net",
 });
 
 export default api;
