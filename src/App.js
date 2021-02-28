@@ -45,7 +45,7 @@ if(valueHourIn == '' || valueMinIn == '' || valueHourOut == '' || valueMinOut ==
       hourOut: valueHourOut,
       minOut: valueMinOut,
     });
-
+    console.log(response.data);
     const project = response.data;
 
     setCalculateHours([...calculateHours, project]);
